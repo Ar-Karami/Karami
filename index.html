@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmadreza Karami | Electrical Machines & Motor Control Researcher</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#0f172a;
+    --secondary:#1e293b;
+    --accent:#2563eb;
+    --light:#f8fafc;
+    --gray:#64748b;
+    --card:#ffffff;
+    --border:#e2e8f0;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--light);
+    color:var(--primary);
+    line-height:1.7;
+}
+
+.container{
+    width:min(1200px,90%);
+    margin:auto;
+}
+
+header{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero-text h1{
+    font-size:4rem;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero-text h2{
+    color:#93c5fd;
+    margin-bottom:25px;
+    font-weight:500;
+}
+
+.hero-text p{
+    font-size:1.1rem;
+    opacity:0.95;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    margin-right:12px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    background:transparent;
+    border:2px solid white;
+}
+
+.hero-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:35px;
+}
+
+.hero-card h3{
+    margin-bottom:20px;
+}
+
+.stat{
+    margin-bottom:18px;
+}
+
+.stat strong{
+    display:block;
+    font-size:1.8rem;
+}
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:var(--gray);
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.card{
+    background:white;
+    border-radius:16px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    background:white;
+    border-radius:16px;
+    padding:25px;
+    border:1px solid var(--border);
+}
+
+.skill-card h3{
+    margin-bottom:15px;
+    color:var(--accent);
+}
+
+.timeline{
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline-item{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-left:5px solid var(--accent);
+    border-radius:10px;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:white;
+    border-radius:16px;
+    padding:25px;
+    border:1px solid var(--border);
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+}
+
+.project-card h3{
+    margin-bottom:15px;
+}
+
+.publication-box{
+    background:white;
+    border-radius:16px;
+    padding:30px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.publication-box ul{
+    padding-left:20px;
+}
+
+.publication-box li{
+    margin-bottom:12px;
+}
+
+.contact{
+    background:#0f172a;
+    color:white;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.contact-card{
+    background:rgba(255,255,255,0.08);
+    padding:25px;
+    border-radius:12px;
+}
+
+footer{
+    background:#020617;
+    color:#94a3b8;
+    text-align:center;
+    padding:25px;
+}
+
+@media(max-width:900px){
+
+.hero{
+    grid-template-columns:1fr;
+}
+
+.about-grid{
+    grid-template-columns:1fr;
+}
+
+.hero-text h1{
+    font-size:2.8rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+<div class="hero">
+
+<div class="hero-text">
+<h1>Ahmadreza Karami</h1>
+
+<h2>Electrical Machines & Motor Control Researcher</h2>
+
+<p>
+Researcher specializing in electrical machines, motor drives, predictive control,
+embedded systems, transportation electrification, and renewable energy technologies.
+My work focuses on advancing high-efficiency electric propulsion systems,
+multiphase machines, intelligent control strategies, and next-generation energy conversion systems.
+</p>
+
+<a href="#contact" class="btn">Contact Me</a>
+<a href="#research" class="btn btn-outline">Research Areas</a>
+</div>
+
+<div class="hero-card">
+
+<h3>Professional Highlights</h3>
+
+<div class="stat">
+<strong>10+</strong>
+Peer-Reviewed Publications
+</div>
+
+<div class="stat">
+<strong>5+</strong>
+Years Research Experience
+</div>
+
+<div class="stat">
+<strong>MATLAB • Python • STM32</strong>
+Simulation & Embedded Systems
+</div>
+
+<div class="stat">
+<strong>PMSM • IPMSM • SRM</strong>
+Motor Drive Expertise
+</div>
+
+</div>
+</div>
+</div>
+</header>
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+<h2>About Me</h2>
+<p>Research, innovation, and engineering excellence.</p>
+</div>
+
+<div class="about-grid">
+
+<div class="card">
+<h3>Profile</h3>
+<br>
+<p>
+I am an electrical engineer and researcher with expertise in electric machines,
+motor control systems, power electronics, renewable energy systems, and embedded programming.
+My research spans analytical modeling, finite-element analysis, predictive control,
+transportation electrification, and intelligent energy management systems.
+</p>
+</div>
+
+<div class="card">
+<h3>Research Interests</h3>
+<br>
+<ul>
+<li>Electrical Machines and Drives</li>
+<li>Predictive Functional Control (PFC)</li>
+<li>Permanent Magnet Synchronous Motors</li>
+<li>Multiphase Electric Machines</li>
+<li>Transportation Electrification</li>
+<li>Electric Vehicles</li>
+<li>Renewable Energy Systems</li>
+<li>Embedded Motor Control</li>
+<li>Artificial Intelligence for Motor Drives</li>
+<li>Power Electronics</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="research">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Technical Skills</h2>
+<p>Research, simulation, design, and implementation.</p>
+</div>
+
+<div class="skills">
+
+<div class="skill-card">
+<h3>Modeling & Simulation</h3>
+<p>
+MATLAB, Simulink, System Identification,
+Control Design, Dynamic Modeling,
+Data Analysis
+</p>
+</div>
+
+<div class="skill-card">
+<h3>Electric Machines</h3>
+<p>
+PMSM, IPMSM, PMaSynRM,
+SRM, Multiphase Machines,
+Generator Design
+</p>
+</div>
+
+<div class="skill-card">
+<h3>Finite Element Analysis</h3>
+<p>
+ANSYS Maxwell,
+JMAG,
+Electromagnetic Design,
+Performance Evaluation
+</p>
+</div>
+
+<div class="skill-card">
+<h3>Embedded Systems</h3>
+<p>
+STM32,
+Embedded C,
+C++,
+Real-Time Control
+</p>
+</div>
+
+<div class="skill-card">
+<h3>Programming</h3>
+<p>
+Python,
+MATLAB,
+C,
+C++,
+Automation & Post-Processing
+</p>
+</div>
+
+<div class="skill-card">
+<h3>Power Electronics</h3>
+<p>
+Motor Drives,
+Converters,
+EV Power Systems,
+Energy Management
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="experience">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Research Experience</h2>
+<p>Selected highlights from academic and research activities.</p>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>Predictive Functional Control of PMSM Drives</h3>
+<p>
+Developed advanced predictive control strategies
+for high-performance speed regulation and dynamic response improvement.
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>Electric Bicycle Propulsion Systems</h3>
+<p>
+Designed and analyzed Permanent Magnet Assisted Synchronous Reluctance Motors
+for transportation electrification applications.
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>Small-Scale Wind Energy Generation</h3>
+<p>
+Investigated transverse flux generators using ferrite and rare-earth magnets
+for cost-effective renewable energy systems.
+</p>
+</div>
+
+<div class="timeline-item">
+<h3>Embedded Motor Control Platforms</h3>
+<p>
+Implemented motor control algorithms on STM32-based platforms
+for real-time embedded applications.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Featured Projects</h2>
+<p>Engineering projects and research developments.</p>
+</div>
+
+<div class="projects">
+
+<div class="project-card">
+<h3>FOC-Controlled PMSM Emulator</h3>
+<p>
+Development of a complete emulator framework for field-oriented controlled
+permanent magnet synchronous motor drives.
+</p>
+</div>
+
+<div class="project-card">
+<h3>PMaSynRM for E-Bikes</h3>
+<p>
+Design optimization and performance analysis of permanent magnet assisted
+synchronous reluctance motors for electric bicycles.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Predictive Functional Control Framework</h3>
+<p>
+Model-based predictive controller development
+for high-performance motor drive systems.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Multiphase Machine Modeling</h3>
+<p>
+Dynamic modeling and control architecture development
+for future transportation electrification systems.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="publications">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Publications</h2>
+<p>Research contributions and scientific publications.</p>
+</div>
+
+<div class="publication-box">
+
+<p>
+Author of more than 10 peer-reviewed publications in electrical machines,
+motor drives, predictive control systems, renewable energy applications,
+and transportation electrification.
+</p>
+
+<br>
+
+<ul>
+<li>Advanced control of permanent magnet synchronous motor drives.</li>
+<li>Predictive functional control applications in electric machines.</li>
+<li>Machine design optimization for transportation electrification.</li>
+<li>Renewable energy generation using advanced electromagnetic structures.</li>
+<li>Data-driven and intelligent approaches for machine modeling.</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Contact</h2>
+<p>Open to research collaborations, Ph.D. opportunities, and engineering positions.</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>Email</h3>
+<p>your.email@example.com</p>
+</div>
+
+<div class="contact-card">
+<h3>LinkedIn</h3>
+<p>linkedin.com/in/your-profile</p>
+</div>
+
+<div class="contact-card">
+<h3>Google Scholar</h3>
+<p>Add your Scholar profile link</p>
+</div>
+
+<div class="contact-card">
+<h3>Location</h3>
+<p>Available for international research opportunities</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>
+© 2026 Ahmadreza Karami | Electrical Machines, Motor Drives, Renewable Energy & Embedded Systems
+</p>
+</footer>
+
+</body>
+</html>
