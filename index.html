@@ -97,20 +97,35 @@ header{
     background:rgba(255,255,255,0.08);
     backdrop-filter:blur(10px);
     border-radius:20px;
-    padding:35px;
+    padding:30px;
 }
 
-.hero-card h3{
-    margin-bottom:20px;
+.hero-card-top{
+    display:grid;
+    grid-template-columns:300px 1fr;
+    gap:30px;
+    align-items:center;
+}
+
+.hero-card-bottom{
+    display:flex;
+    justify-content:left;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+.hero-card-bottom .stat{
+    margin-bottom:12px;
 }
 
 .stat{
-    margin-bottom:18px;
+    margin-bottom:10px;
 }
 
 .stat strong{
     display:block;
-    font-size:1.8rem;
+    font-size:1.2rem;
 }
 
 section{
@@ -253,14 +268,84 @@ footer{
 }
 
 .profile-image{
-    width:350px;
-    height:350px;
+    width:280px;
+    height:280px;
     object-fit:cover;
     border-radius:50%;
     border:6px solid #2563eb;
-    box-shadow:0 15px 40px rgba(37,99,235,0.25);
     display:block;
     margin:auto;
+}
+
+.gauge-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin: 10px;
+}
+
+.gauge-bg{
+    fill:none;
+    stroke:#334155;
+    stroke-width:10;
+}
+
+.gauge-progress{
+    fill:none;
+    stroke:#2563eb;
+    stroke-width:10;
+    stroke-linecap:round;
+    stroke-dasharray:377;
+    stroke-dashoffset:377;
+    transition:stroke-dashoffset 2s ease;
+}
+
+.gauge-value{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:1.8rem;
+    font-weight:700;
+}
+
+.gauge-label{
+    margin-top:10px;
+    text-align:center;
+    font-size:0.95rem;
+}
+
+
+.gauges-row{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap: 10px;
+    margin-top:25px;
+    align-items:start;
+}
+
+.gauge{
+    width:100px;
+    height:100px;
+    position:relative;
+}
+
+.gauge svg{
+    width:100px;
+    height:100px;
+    transform:rotate(-90deg);
+}
+
+@media(max-width:900px){
+
+    .hero-card{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .gauges-row{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
 
 </style>
@@ -290,46 +375,94 @@ multiphase machines, intelligent control strategies, and next-generation energy 
 
 <div class="hero-card">
 
-<img src="images/profile.jpg"
-     alt="Ahmadreza Karami"
-     class="profile-image">
+<div class="hero-card-top">
 
-<br>
+    <div class="profile-column">
 
-<div class="stat">
-<strong>10+</strong>
-Peer-Reviewed Publications
+        <img src="images/profile.jpg"
+            alt="Ahmadreza Karami"
+            class="profile-image">
+
+        <br>
+
+    </div>
+
+    <div class="metrics-column">
+        <div class="gauges-row">
+
+            <div class="gauge-container">
+                <div class="gauge" data-percent="100">
+                    <svg viewBox="0 0 100 100">
+                        <circle class="gauge-bg" cx="50" cy="50" r="45"></circle>
+                        <circle class="gauge-progress" cx="50" cy="50" r="45"></circle>
+                    </svg>
+                    <div class="gauge-value">10+</div>
+                </div>
+                <div class="gauge-label">
+                    Publications
+                </div>
+            </div>
+
+            <div class="gauge-container">
+                <div class="gauge" data-percent="100">
+                    <svg viewBox="0 0 100 100">
+                        <circle class="gauge-bg" cx="50" cy="50" r="45"></circle>
+                        <circle class="gauge-progress" cx="50" cy="50" r="45"></circle>
+                    </svg>
+                    <div class="gauge-value">5+</div>
+                </div>
+                <div class="gauge-label">
+                    y.o. Research
+                </div>
+            </div>
+
+            <div class="gauge-container">
+                <div class="gauge" data-percent="100">
+                    <svg viewBox="0 0 100 100">
+                        <circle class="gauge-bg" cx="50" cy="50" r="45"></circle>
+                        <circle class="gauge-progress" cx="50" cy="50" r="45"></circle>
+                    </svg>
+                    <div class="gauge-value">6</div>
+                </div>
+                <div class="gauge-label">
+                    h-index
+                </div>
+            </div>
+
+            <div class="gauge-container">
+                <div class="gauge" data-percent="100">
+                    <svg viewBox="0 0 100 100">
+                        <circle class="gauge-bg" cx="50" cy="50" r="45"></circle>
+                        <circle class="gauge-progress" cx="50" cy="50" r="45"></circle>
+                    </svg>
+                    <div class="gauge-value">25+</div>
+                </div>
+                <div class="gauge-label">
+                    Peer Review
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="stat">
-<strong>5+</strong>
-Years Research Experience
-</div>
+<div class="hero-card-bottom">
+    <div class="stat">
+    <strong>PMSM • BLDC • SynRM • SRM</strong>
+    Motor Drive Expertise
+    </div>
 
-<div class="stat">
-<strong>PMSM • IPMSM • SRM</strong>
-Motor Drive Expertise
-</div>
+    <div class="stat">
+    <strong>MATLAB • Smulink • ANSYS • Embedded</strong>
+    Simulation & Embedded Systems
+    </div>
 
-</div>
-
-<div class="stat">
-<strong>5+</strong>
-Years Research Experience
-</div>
-
-<div class="stat">
-<strong>MATLAB • Python • STM32</strong>
-Simulation & Embedded Systems
-</div>
-
-<div class="stat">
-<strong>PMSM • IPMSM • SRM</strong>
-Motor Drive Expertise
-</div>
+    <div class="stat">
+        <strong> Electrical Machines • Power Electronics • EV Systems</strong>
+        Transportation Electrification
+    </div>
 
 </div>
-</div>
+
 </div>
 </header>
 
@@ -625,6 +758,48 @@ and transportation electrification.
 © 2026 Ahmadreza Karami | Electrical Machines, Motor Drives, Renewable Energy & Embedded Systems
 </p>
 </footer>
+
+<script>
+document.querySelectorAll('.gauge').forEach(gauge => {
+
+    const circle = gauge.querySelector('.gauge-progress');
+
+    const radius = circle.r.baseVal.value;
+    const circumference = 2 * Math.PI * radius;
+
+    circle.style.strokeDasharray = circumference;
+    circle.style.strokeDashoffset = circumference;
+
+    gauge.dataset.circumference = circumference;
+});
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            const gauge = entry.target;
+            const percent = gauge.dataset.percent;
+
+            const circle = gauge.querySelector('.gauge-progress');
+            const circumference = gauge.dataset.circumference;
+
+            const offset =
+                circumference -
+                (percent / 100) * circumference;
+
+            circle.style.strokeDashoffset = offset;
+
+            observer.unobserve(gauge);
+        }
+    });
+
+},{threshold:0.3});
+
+document.querySelectorAll('.gauge')
+        .forEach(g => observer.observe(g));
+</script>
 
 </body>
 </html>
