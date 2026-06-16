@@ -7,348 +7,13 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-:root{
-    --primary:#0f172a;
-    --secondary:#1e293b;
-    --accent:#2563eb;
-    --light:#f8fafc;
-    --gray:#64748b;
-    --card:#ffffff;
-    --border:#e2e8f0;
-}
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Inter',sans-serif;
-    background:var(--light);
-    color:var(--primary);
-    line-height:1.7;
-}
-
-.container{
-    width:min(1200px,90%);
-    margin:auto;
-}
-
-header{
-    background:linear-gradient(135deg,#0f172a,#1e3a8a);
-    color:white;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-}
-
-.hero{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.hero-text h1{
-    font-size:4rem;
-    line-height:1.1;
-    margin-bottom:20px;
-}
-
-.hero-text h2{
-    color:#93c5fd;
-    margin-bottom:25px;
-    font-weight:500;
-}
-
-.hero-text p{
-    font-size:1.1rem;
-    opacity:0.95;
-    margin-bottom:35px;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 28px;
-    background:#2563eb;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    margin-right:12px;
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-}
-
-.btn-outline{
-    background:transparent;
-    border:2px solid white;
-}
-
-.hero-card{
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(10px);
-    border-radius:20px;
-    padding:30px;
-}
-
-.hero-card-top{
-    display:grid;
-    grid-template-columns:300px 1fr;
-    gap:30px;
-    align-items:center;
-}
-
-.hero-card-bottom{
-    display:flex;
-    justify-content:left;
-    gap:20px;
-    flex-wrap:wrap;
-    margin-top:25px;
-}
-
-.hero-card-bottom .stat{
-    margin-bottom:12px;
-}
-
-.stat{
-    margin-bottom:10px;
-}
-
-.stat strong{
-    display:block;
-    font-size:1.2rem;
-}
-
-section{
-    padding:90px 0;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.section-title h2{
-    font-size:2.5rem;
-    margin-bottom:10px;
-}
-
-.section-title p{
-    color:var(--gray);
-}
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-}
-
-.card{
-    background:white;
-    border-radius:16px;
-    padding:30px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.05);
-}
-
-.skills{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.skill-card{
-    background:white;
-    border-radius:16px;
-    padding:25px;
-    border:1px solid var(--border);
-}
-
-.skill-card h3{
-    margin-bottom:15px;
-    color:var(--accent);
-}
-
-.timeline{
-    max-width:900px;
-    margin:auto;
-}
-
-.timeline-item{
-    background:white;
-    padding:25px;
-    margin-bottom:20px;
-    border-left:5px solid var(--accent);
-    border-radius:10px;
-}
-
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:25px;
-}
-
-.project-card{
-    background:white;
-    border-radius:16px;
-    padding:25px;
-    border:1px solid var(--border);
-    transition:0.3s;
-}
-
-.project-card:hover{
-    transform:translateY(-8px);
-}
-
-.project-card h3{
-    margin-bottom:15px;
-}
-
-.publication-box{
-    background:white;
-    border-radius:16px;
-    padding:30px;
-    max-width:1000px;
-    margin:auto;
-}
-
-.publication-box ul{
-    padding-left:20px;
-}
-
-.publication-box li{
-    margin-bottom:12px;
-}
-
-.contact{
-    background:#0f172a;
-    color:white;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.contact-card{
-    background:rgba(255,255,255,0.08);
-    padding:25px;
-    border-radius:12px;
-}
-
-footer{
-    background:#020617;
-    color:#94a3b8;
-    text-align:center;
-    padding:25px;
-}
-
-@media(max-width:900px){
-
-.hero{
-    grid-template-columns:1fr;
-}
-
-.about-grid{
-    grid-template-columns:1fr;
-}
-
-.hero-text h1{
-    font-size:2.8rem;
-}
-}
-
-.profile-image{
-    width:280px;
-    height:280px;
-    object-fit:cover;
-    border-radius:50%;
-    border:6px solid #2563eb;
-    display:block;
-    margin:auto;
-}
-
-.gauge-container{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    margin: 10px;
-}
-
-.gauge-bg{
-    fill:none;
-    stroke:#334155;
-    stroke-width:10;
-}
-
-.gauge-progress{
-    fill:none;
-    stroke:#2563eb;
-    stroke-width:10;
-    stroke-linecap:round;
-    stroke-dasharray:377;
-    stroke-dashoffset:377;
-    transition:stroke-dashoffset 2s ease;
-}
-
-.gauge-value{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    font-size:1.8rem;
-    font-weight:700;
-}
-
-.gauge-label{
-    margin-top:10px;
-    text-align:center;
-    font-size:0.95rem;
-}
+<link rel="stylesheet" href="style.css">
+ <script src="main.js" defer></script>
 
 
-.gauges-row{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap: 10px;
-    margin-top:25px;
-    align-items:start;
-}
-
-.gauge{
-    width:100px;
-    height:100px;
-    position:relative;
-}
-
-.gauge svg{
-    width:100px;
-    height:100px;
-    transform:rotate(-90deg);
-}
-
-@media(max-width:900px){
-
-    .hero-card{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-    .gauges-row{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-</style>
 </head>
 
 <body>
@@ -362,14 +27,52 @@ footer{
 
 <h2>Electrical Machines Researcher</h2>
 
-<p>
-Researcher specializing in electrical machines, motor drives, predictive control,
-embedded systems, transportation electrification, and renewable energy technologies.
-My work focuses on advancing high-efficiency electric propulsion systems,
-multiphase machines, intelligent control strategies, and next-generation energy conversion systems.
+<p class="bio">
+Electrical engineer with expertise in power electronics and electrical machine design, backed by 5+ years of industrial experience. Specialized in
+motor control and advanced machine design for transportation electrification. Strong academic foundation supported by peer-reviewed publications
+and proven ability to bridge research and practical applications.
 </p>
 
-<a href="#contact" class="btn">Contact Me</a>
+<div class="social-links">
+
+    <a href="https://linkedin.com/in/karamishahnani"
+       target="_blank"
+       title="LinkedIn"
+       class="linkedin">
+        <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a href="https://scholar.google.com/citations?hl=en&user=x4hG700AAAAJ"
+       target="_blank"
+       title="Google Scholar"
+       class="scholar">
+        <i class="fas fa-graduation-cap"></i>
+    </a>
+
+    <a href="https://ieeexplore.ieee.org/author/37088844757"
+       target="_blank"
+       title="IEEE"
+       class="ieee">
+        <i class="fas fa-microchip"></i>
+    </a>
+
+    <a href="https://orcid.org/0000-0002-6478-6474"
+       target="_blank"
+       title="ORCID"
+       class="orcid">
+        <i class="fab fa-orcid"></i>
+    </a>
+
+    <a href="mailto:arkarami.edu@gmail.com"
+       title="Email"
+       class="gmail">
+        <i class="fas fa-envelope"></i>
+    </a>
+
+</div>
+
+
+<a href="#contact" class="btn btn-outline">Contact Me</a>
 <a href="#research" class="btn btn-outline">Research Areas</a>
 </div>
 
@@ -396,7 +99,7 @@ multiphase machines, intelligent control strategies, and next-generation energy 
                         <circle class="gauge-bg" cx="50" cy="50" r="45"></circle>
                         <circle class="gauge-progress" cx="50" cy="50" r="45"></circle>
                     </svg>
-                    <div class="gauge-value">10+</div>
+                    <div class="gauge-value">13+</div>
                 </div>
                 <div class="gauge-label">
                     Publications
@@ -480,11 +183,11 @@ multiphase machines, intelligent control strategies, and next-generation energy 
 <div class="card">
 <h3>Profile</h3>
 <br>
-<p>
-I am an electrical engineer and researcher with expertise in electric machines,
-motor control systems, power electronics, renewable energy systems, and embedded programming.
-My research spans analytical modeling, finite-element analysis, predictive control,
-transportation electrification, and intelligent energy management systems.
+<p >
+I design, model, and control advanced electric machines and motor drive systems.
+<br>
+With expertise in PMSM, SynRM, PM-assisted SynRM, power electronics, and predictive control, I bridge academic research and industrial innovation to develop high-performance solutions for electrification, automation, and next-generation energy systems.
+
 </p>
 </div>
 
@@ -493,8 +196,6 @@ transportation electrification, and intelligent energy management systems.
 <br>
 <ul>
 <li>Electrical Machines and Drives</li>
-<li>Predictive Functional Control (PFC)</li>
-<li>Permanent Magnet Synchronous Motors</li>
 <li>Multiphase Electric Machines</li>
 <li>Transportation Electrification</li>
 <li>Electric Vehicles</li>
@@ -507,6 +208,88 @@ transportation electrification, and intelligent energy management systems.
 
 </div>
 
+</div>
+</section>
+
+<section id="education">
+    <div class="container">
+
+<div class="section-title">
+<h2>Education</h2>
+<p>Research, innovation, and engineering excellence.</p>
+</div>
+
+    <div class="education-grid">
+
+        <!-- MSc -->
+        <div class="card">
+    <div class="edu-content">
+
+        <div class="edu-info">
+            <h3>🎓 M.Sc. Electrical Engineering</h3>
+            <p><strong>Institute:</strong> K.N. Toosi University of Tehchnology</p>
+            <p><strong>Location:</strong>Tehran, Iran</p>
+            <p><strong>Year:</strong> 2020 – 2023</p>
+            <p><strong>Rank:</strong> A</p>
+        </div>
+            <div class="gauge-container">
+                <div class="gauge" data-percent="93">
+                    <svg viewBox="0 0 100 100">
+                        <circle class="gauge-bg" cx="50" cy="50" r="45"></circle>
+                        <circle class="gauge-progress" cx="50" cy="50" r="45"></circle>
+                    </svg>
+                    <div class="gauge-value">19.26</div>
+                </div>
+                <div class="gauge-label">
+                    <small>Grade out of 20</small> 
+                </div>
+            </div>
+        </div>
+  
+            <p><strong>Thesis:</strong> Developing Sensorless Control Algorithms for a PMASynRM Used in e-Bike Apllication</p>
+                <div class="bio">
+                    <p>I developed a new controller for a PMASynRMused in an e-bike. The con troller is based on a simple predictive model, aiming to balance ease of implementa tion—considering hardware constraints—with improved control performance over con ventional controllers. The controller was successfully implemented and experimentally validated.
+                    </p>
+                </div>
+            </div>
+        
+        <!-- BSc -->
+        <div class="card">
+           
+<div class="edu-content">
+
+    <div class="edu-info">
+         <h3>🎓 B.Sc. Electrical Engineering</h3>
+        <p><strong>Institute:</strong> K.N. Toosi University of Technology</p>
+        <p><strong>Location:</strong> Tehran, Iran</p>
+        <p><strong>Year:</strong> 2016 – 2020</p>
+        <p><strong>Rank:</strong> A</p>
+    </div>
+
+    <div class="gauge-container">
+        <div class="gauge" data-percent="87">
+            <svg viewBox="0 0 100 100">
+                <circle class="gauge-bg" cx="50" cy="50" r="45"></circle>
+                <circle class="gauge-progress" cx="50" cy="50" r="45"></circle>
+            </svg>
+            <div class="gauge-value">17.35</div>
+        </div>
+
+        <div class="gauge-label">
+            <small>Grade out of 20</small>
+        </div>
+    </div>
+
+</div>
+            <p><strong>Thesis:</strong> Performance Optimization of Automobile Cooling Fan</p>
+                <div class="bio">
+                    <p> 
+                        I optimized the winding con figuration of a DC motor used as an automotive cool ing fan. The optimization considered both cost and per formance, resulting in a 15% improvement in performance while keeping the total cost increase under 5%.
+                    </p>
+                </div>
+        </div>
+
+    </div>
 </div>
 </section>
 
@@ -759,47 +542,7 @@ and transportation electrification.
 </p>
 </footer>
 
-<script>
-document.querySelectorAll('.gauge').forEach(gauge => {
 
-    const circle = gauge.querySelector('.gauge-progress');
-
-    const radius = circle.r.baseVal.value;
-    const circumference = 2 * Math.PI * radius;
-
-    circle.style.strokeDasharray = circumference;
-    circle.style.strokeDashoffset = circumference;
-
-    gauge.dataset.circumference = circumference;
-});
-
-const observer = new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-        if(entry.isIntersecting){
-
-            const gauge = entry.target;
-            const percent = gauge.dataset.percent;
-
-            const circle = gauge.querySelector('.gauge-progress');
-            const circumference = gauge.dataset.circumference;
-
-            const offset =
-                circumference -
-                (percent / 100) * circumference;
-
-            circle.style.strokeDashoffset = offset;
-
-            observer.unobserve(gauge);
-        }
-    });
-
-},{threshold:0.3});
-
-document.querySelectorAll('.gauge')
-        .forEach(g => observer.observe(g));
-</script>
 
 </body>
 </html>
