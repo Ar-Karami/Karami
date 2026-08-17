@@ -476,3 +476,17 @@ footer{
 .edu-info{
     flex:1;
 }
+
+
+.experience-video {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.experience-video iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
